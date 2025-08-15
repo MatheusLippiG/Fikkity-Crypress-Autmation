@@ -1,4 +1,4 @@
-import { Given } from "@badeball/cypress-cucumber-preprocessor";
+const { faker } = require('@faker-js/faker');
 import { ELEMENTS } from "../support/selectors";
 
 
@@ -8,8 +8,9 @@ describe ('Realização do orçamento preenchendo os campos', () => {
         cy.visit('https://www.fikkitytattoo.com.br/schedule');
         })
 
-    it.only ('Preenchendo todos os dados válidos', () =>{
-        cy.get(ELEMENTS.nomeCompleto).type('Matheus Teste');
+    it ('Preenchendo todos os dados válidos', () =>{
+
+        cy.get(ELEMENTS.nomeCompleto).type(nome);
         cy.get(ELEMENTS.idade).type('18');
         cy.get(ELEMENTS.email).type('testeteste@gmail.com');
         cy.get(ELEMENTS.telefone).type('21999999999');
@@ -42,6 +43,4 @@ describe ('Realização do orçamento preenchendo os campos', () => {
         cy.get('.inline-flex').click();
         cy.get(ELEMENTS.menu).should('be.visible');
     })
-
-
 })

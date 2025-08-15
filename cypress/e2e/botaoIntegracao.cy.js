@@ -24,3 +24,4 @@ describe ('Teste de funcionalidade dos botões de integração', () => {
         .click();
     })
 })
+

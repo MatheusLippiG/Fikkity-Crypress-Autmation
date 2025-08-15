@@ -33,5 +33,5 @@ export function clicarEValidarImagem2(nCliques, imgAnterior = null) {
       })
       .then((srcAtual) => {
         clicarEValidarImagem2(nCliques - 1, srcAtual);
-      });
+      });  
 }
